@@ -7,6 +7,7 @@ fun main() {
     compareNumbers()
     convert()
     bitOperations()
+    arrays()
 }
 
 
@@ -22,6 +23,7 @@ fun compareStrings() {
     println(s1 == s3)  // true
     println(s1 === s3) // true
 
+    println()
 }
 
 fun compareNumbers() {
@@ -41,6 +43,7 @@ fun compareNumbers() {
     println(num1 === num2) // false!!!
     // if use Int for nums (without nullable) '===' will return true
 
+    println()
 }
 
 fun convert() {
@@ -51,6 +54,8 @@ fun convert() {
 
     val l = 1L + 3 // Long + Int => Long
     println(l)
+
+    println()
 }
 
 
@@ -58,6 +63,8 @@ fun bitOperations() {
     println("bit operations:")
     println(1 shl 2)
     println((1 shl 2) and 0x000FF000)
+
+    println()
 }
 
 
@@ -66,6 +73,26 @@ fun arrays() {
     println("arrays:")
 
 
+    var acs = Array(5) {i -> (i * i).toString()}
+    acs.forEach { print("$it ") }
+
+    println()
+
+    println(acs[3])
+    println(acs.get(3))
+
+    acs = acs.plusElement("666")
+
+    acs.reverse()
+    acs.forEach { print("$it ") }
+
+    println()
+
+    arrayOf(1, 3, 5, 7).forEach { print("$it ") }
+    println()
+
+    listOf(2, 4, 6, 8).forEach{print("$it ")}
+    println()
 }
 
 
